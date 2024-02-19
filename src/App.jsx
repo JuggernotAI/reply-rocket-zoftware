@@ -19,8 +19,8 @@ function App() {
         ) : (
           <>
             <Routes>
+              <Route path="/" element={<Login token={token} setToken={setToken} />} />
               <Route exact path="/profile" element={<Profile token={token} setToken={setToken} />} />
-              <Route path="/twitter_login" element={<Login token={token} setToken={setToken} />} />
               <Route path="/save" element={<Token token={token} setToken={setToken} />} />
               <Route path="/dashboard" element={<Dashboard token={token} setToken={setToken} />} />
             </Routes>
