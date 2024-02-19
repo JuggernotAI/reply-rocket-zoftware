@@ -13,27 +13,27 @@ const MasterLogin = (props) => {
   const logMeIn = (event) => {
     event.preventDefault();
 
-    axios.post("token", {
-      email: loginForm.email,
-      password: loginForm.password
-    })
-      .then((response) => {
-        props.setToken(response.data.access_token);
-        history.push('/twitter_login');
+      axios.post("https://reply-rocket-zoftware-backend.onrender.com/token", {
+        email: loginForm.email,
+        password: loginForm.password
       })
-      .catch((error) => {
-        if (error.response) {
-          console.log(error.response);
-          console.log(error.response.status);
-          console.log(error.response.headers);
-        }
-      });
+        .then((response) => {
+          props.setToken(response.data.access_token);
+          history.push('/twitter_login');
+        })
+        .catch((error) => {
+          if (error.response) {
+            console.log(error.response);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          }
+        });
 
-    setLoginForm({
-      email: "",
-      password: ""
-    });
-  };
+      setLoginForm({
+        email: "",
+        password: ""
+      });
+    };
 
   const handleChange = (event) => {
     const { value, name } = event.target;

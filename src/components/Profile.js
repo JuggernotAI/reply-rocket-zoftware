@@ -10,7 +10,7 @@ function Profile(props) {
 
   const getData = () => {
     axios
-      .get('/profile', {
+      .get("https://reply-rocket-zoftware-backend.onrender.com/profile", {
         headers: {
           Authorization: 'Bearer ' + props.token,
         },

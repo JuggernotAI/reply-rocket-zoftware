@@ -6,7 +6,7 @@ export default function Header(props) {
   useEffect(() => {
     const logMeOut = async () => {
       try {
-        const response = await axios.post('logout');
+        const response = await axios.post(`${process.env.MASTER_LOGIN_BACKEND_URL}/logout`);
         props.token();
       } catch (error) {
         if (error.response) {
@@ -15,7 +15,7 @@ export default function Header(props) {
           console.log(error.response.headers);
         }
       }
-    };
+      };
 
     logMeOut();
   }, []);
