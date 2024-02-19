@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import './MasterLogin.css'; // Import the CSS file
 const MasterLogin = (props) => {
   const [loginForm, setLoginForm] = useState({
     email: "",
@@ -13,27 +13,27 @@ const MasterLogin = (props) => {
   const logMeIn = (event) => {
     event.preventDefault();
 
-      axios.post("https://reply-rocket-zoftware-backend.onrender.com/token", {
-        email: loginForm.email,
-        password: loginForm.password
+    axios.post("https://reply-rocket-zoftware-backend.onrender.com/token", {
+      email: loginForm.email,
+      password: loginForm.password
+    })
+      .then((response) => {
+        props.setToken(response.data.access_token);
+        history.push('/twitter_login');
       })
-        .then((response) => {
-          props.setToken(response.data.access_token);
-          history.push('/twitter_login');
-        })
-        .catch((error) => {
-          if (error.response) {
-            console.log(error.response);
-            console.log(error.response.status);
-            console.log(error.response.headers);
-          }
-        });
-
-      setLoginForm({
-        email: "",
-        password: ""
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        }
       });
-    };
+
+    setLoginForm({
+      email: "",
+      password: ""
+    });
+  };
 
   const handleChange = (event) => {
     const { value, name } = event.target;
@@ -44,9 +44,9 @@ const MasterLogin = (props) => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form className="login">
+    <div className="container-ml">
+      <h1>Welcome to ReplyRocket Admin Page</h1>
+      <form className="form-field-ml">
         <input
           onChange={handleChange}
           type="email"
@@ -61,7 +61,7 @@ const MasterLogin = (props) => {
           placeholder="Password"
           value={loginForm.password}
         />
-        <button onClick={logMeIn}>Submit</button>
+        <button className='button-ml' onClick={logMeIn}>Submit</button>
       </form>
     </div>
   );
