@@ -1,0 +1,20 @@
+.tweet-header {
+  gap: 3px;
+  align-self: flex-start;
+}
+
+.tweet-profile-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.tweet-profile-handle {
+  padding-left: 3px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #5b7083;
+}
+
+.twitter-verified {
+  width: 20px;
+}

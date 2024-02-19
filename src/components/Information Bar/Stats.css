@@ -1,0 +1,11 @@
+.stats-container {
+  width: 85vw;
+  justify-content: space-between;
+  color: white;
+  font-size: 20px;
+}
+
+.fetched-tweets-count {
+  color: rgb(92, 225, 230);
+  padding-left: 2px;
+}

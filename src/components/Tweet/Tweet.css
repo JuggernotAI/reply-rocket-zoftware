@@ -1,0 +1,28 @@
+.tweet {
+  width: -webkit-fill-available;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 12px;
+  padding: 12px;
+  /* border-bottom: 2px solid #a5a9ac; */
+}
+
+.tweet-image-container {
+  height: -webkit-fill-available;
+  align-self: flex-start;
+  flex-wrap: nowrap;
+}
+
+.tweet-profile-image {
+  width: 40px;
+  border-radius: 100%;
+}
+
+.tweet-content-container {
+  gap: 3px;
+}
+
+.tweet-content {
+  font-size: 15px;
+  font-weight: 400;
+}

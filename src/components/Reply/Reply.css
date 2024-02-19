@@ -1,0 +1,33 @@
+.reply {
+  width: -webkit-fill-available;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 12px;
+  padding: 12px;
+}
+
+.reply-image-container {
+  height: -webkit-fill-available;
+  align-self: flex-start;
+  flex-wrap: nowrap;
+}
+
+.reply-profile-image {
+  width: 40px;
+  border-radius: 100%;
+}
+
+.reply-content {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.reply-content-edit {
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: -webkit-fill-available;
+  height: max-content;
+}

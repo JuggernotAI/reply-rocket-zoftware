@@ -1,0 +1,47 @@
+.actions-bar {
+  padding: 10px;
+  width: -webkit-fill-available;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.action-button {
+  cursor: pointer;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 18px;
+  transition: 0.2s ease-in-out;
+}
+
+.edit-button:hover {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+}
+
+.send-button:hover {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.send-icon {
+  width: 17px;
+  padding-right: 5px;
+}
+
+.edit-icon {
+  width: 17px;
+  padding-right: 5px;
+}
+
+.trash-icon {
+  width: 20px;
+}
+
+.delete-button:hover {
+  background-color: #fa9e97;
+}
